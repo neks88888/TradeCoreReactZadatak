@@ -1,0 +1,196 @@
+ @import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+
+
+body {
+  margin: 0%;
+  padding: 0%;
+  font-family: montserrat, arial, verdana;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: transparent;
+  color: gray;
+  border: 3px solid gray;
+  padding: 1rem;
+  margin: 3px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.genres {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+button.prev {
+  background-color: gray;
+  color: white;
+}
+
+
+.form-container {
+  width: 600px;
+  height: 800px;
+  background-color: white;
+  border-radius: 8px;
+  
+  display: flex;
+  justify-content: center;
+}
+
+
+.personal-info-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.personal-info-container input {
+  margin: 5px;
+  width: 200px;
+  height: 40px;
+  padding-left: 5px;
+  font-size: 20px;
+}
+
+/* PROGRESS BAR */
+.progressbar {
+  width: 400px;
+  height: 10px;
+  background-color: #ccacac;
+  
+  border-radius: 5px;
+  margin: 50px auto;
+}
+
+.progressbar div {
+  width: 33.3%;
+  height: 100%;
+  background-color: gray;
+}
+input {
+  border: 2px solid rgb(98, 0, 255);
+  border-radius: 5px;
+}
+
+input:focus {
+  border: 3px solid rgb(98, 0, 255);
+} 
+
+label {
+  display: block;
+  padding: .5rem 0;
+  margin: .5rem 0;
+}
+
+.addNewBook {
+  max-width: 70vw;
+  padding: 3rem;
+  width: 100%;
+ 
+  margin: 0 auto;
+ 
+  align-items: flex-start;
+}
+
+.addNewBook input{
+  display: block;
+  width: 100%;
+  padding: .5rem;
+  border-radius: 5px;
+  border:1px solid gray;
+  text-align: left;
+}
+
+.sub {
+    background-color: gray;
+    width: 20px;
+    text-align: center;
+
+    color: white;
+    text-align: center;
+    padding: 0;
+   margin: 0 auto;
+}
+
+
+.format {    
+  display: block;
+  width: 103%;
+  padding: 0.5rem 0;
+  margin: 0.5rem 0;
+}
+
+.end {
+  background-color: hsl(120, 59%, 32%);
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 5px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.sign-up-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+button.addNew {
+  background-color: gray;
+  color: white;
+
+}
+
+footer.prev {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.addSubgenre {
+  display: block;
+  width: 100%;
+  border: 1px solid black;
+  outline: none;
+  padding: .5rem;
+}
+
+.check {
+  display: inline-block;
+}
+.check label {
+  display: block;
+}
+.buttons-container {
+ text-align: center;
+ margin: 50px auto;
+}
+
+.subgenres {
+  text-align: center;
+}
+
+.addNewSubgenre {
+  width: 70vw;
+  margin: 0 auto;
+  text-align: center;
+}
+
