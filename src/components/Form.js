@@ -14,9 +14,13 @@ function Form(props) {
     name: "",
     isDescriptionRequired: false,
   });
-  const [desider, setDesider] = useState(true);
 
-  const FormTitles = ["AllGenres", "Subgenre", "Add New Book"];
+  const FormTitles = [
+    "AllGenres",
+    "Subgenres",
+    "Create New Genre",
+    "Add New Book",
+  ];
 
   const selectSubgenres = (id) => {
     const selGenre = allGenres.find((g) => g.id === id);
@@ -27,8 +31,7 @@ function Form(props) {
   const handleFirstSubmit = (event) => {
     event.preventDefault();
     setSubgenres([...subGenres, addNew]);
-    setPage(2);
-    setDesider(false);
+    setPage(3);
   };
 
   const PageDisplay = () => {
@@ -36,11 +39,11 @@ function Form(props) {
       return <Genres />;
     } else if (page === 1) {
       return <Subgenres />;
-    } else if (page === 2 && desider === true) {
+    } else if (page === 2) {
       return <AddNew />;
-    } else if (page === 2 && desider === false) {
-      return <BookForm />;
     } else if (page === 3) {
+      return <BookForm />;
+    } else if (page === 4) {
       return (
         <div className="end">
           <h1>Successfylly added a new book</h1>
@@ -56,7 +59,6 @@ function Form(props) {
         allGenres,
         selectSubgenres,
         subGenres,
-        setDesider,
         handleFirstSubmit,
         addNew,
         setAddNew,
@@ -94,17 +96,18 @@ function Form(props) {
               Previous
             </button>
 
-            {/* <button
+            <button
               className="prev"
               onClick={() => {
-                setPage((currPage) => currPage + 1);
-              }}
-              style={{
-                display: page === 2 && desider === false ? "none" : null,
+                if (page === FormTitles.length - 1) {
+                  alert("FORM SUBMITTED");
+                } else {
+                  setPage((currPage) => currPage + 1);
+                }
               }}
             >
-              Next
-            </button> */}
+              {page === FormTitles.length - 1 ? "Submit" : "Next"}
+            </button>
           </div>
         </div>
       </div>

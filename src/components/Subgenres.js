@@ -2,14 +2,13 @@ import React, { useContext } from "react";
 import { AppContext } from "../context/AppContext";
 
 function Subgenres() {
-  const { subGenres, setPage, setDesider } = useContext(AppContext);
+  const { subGenres, setPage } = useContext(AppContext);
   return (
     <div className="subgenres">
       {subGenres.map(({ id, name }) => (
         <button
           onClick={() => {
-            setPage(2);
-            setDesider(false);
+            setPage(3);
           }}
           key={id}
         >
@@ -21,7 +20,6 @@ function Subgenres() {
         className="addNew"
         onClick={() => {
           setPage(2);
-          setDesider(true);
         }}
       >
         Add New
